@@ -30,18 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password = 'jgbm llue ibkm cywr';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
-    
+
         $mail->setFrom('thirumurugan1042@gmail.com', 'Thirumurugan');
         $mail->addAddress('thiru10042002@gmail.com', 'Murugan');
-    
+
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body    = $message;
-    
+
         $mail->send();
         echo "Message has been sent successfully!";
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
-}    
+}
 ?>
